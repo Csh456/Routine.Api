@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Asp.Net\\Slu20210114\\Routine.Api\\Routine.Api.csproj": {}
+    "D:\\Slu20200115\\Routine.Api\\Routine.Api.csproj": {}
   },
   "projects": {
-    "D:\\Asp.Net\\Slu20210114\\Routine.Api\\Routine.Api.csproj": {
+    "D:\\Slu20200115\\Routine.Api\\Routine.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Asp.Net\\Slu20210114\\Routine.Api\\Routine.Api.csproj",
+        "projectUniqueName": "D:\\Slu20200115\\Routine.Api\\Routine.Api.csproj",
         "projectName": "Routine.Api",
-        "projectPath": "D:\\Asp.Net\\Slu20210114\\Routine.Api\\Routine.Api.csproj",
+        "projectPath": "D:\\Slu20200115\\Routine.Api\\Routine.Api.csproj",
         "packagesPath": "C:\\Users\\IT\\.nuget\\packages\\",
-        "outputPath": "D:\\Asp.Net\\Slu20210114\\Routine.Api\\obj\\",
+        "outputPath": "D:\\Slu20200115\\Routine.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

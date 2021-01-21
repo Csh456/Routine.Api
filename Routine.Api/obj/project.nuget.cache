@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "q5dzFo9xLFEBpkq7I6ZV7298hQrqKQ+LOeeUQQRjO72TZkR2TZXibr2J/Qd5uKfKzRRhEpsMCKsMljJyzfGXcw==",
+  "dgSpecHash": "/iMmqx18wsy18esgADaaMp6XKgcF+08m4lE4WrVxBh7gMkq+PXYpq7rU6qF2K7W/1dVJh60RwWcJ+EmLcbzw5Q==",
   "success": true,
-  "projectFilePath": "D:\\Asp.Net\\Slu20210114\\Routine.Api\\Routine.Api.csproj",
+  "projectFilePath": "D:\\Slu20200115\\Routine.Api\\Routine.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\IT\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\IT\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
