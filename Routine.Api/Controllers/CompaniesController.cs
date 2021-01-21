@@ -1,19 +1,4 @@
-<<<<<<< HEAD
-﻿using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Routine.Api.Controllers
-{
-    public class CompaniesController : Controller
-    {
-        public IActionResult Index()
-        {
-            return View();
-=======
-﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -61,7 +46,6 @@ namespace Routine.Api.Controllers
             }
 
             return Ok(company);
->>>>>>> b5d21473de964c3d2cf683598c0aad8818437375
         }
     }
 }

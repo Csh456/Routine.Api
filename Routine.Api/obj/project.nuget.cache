@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "ylsBKe0zUcTA+a+4T6A9iQAkLqdsRbXEbPi2FUVkkzrSr0CRTZiwotLXyQ1+AOkR7psOqlOdqs0T3UoagIuwlg==",
   "success": true,
   "projectFilePath": "E:\\Asp.NetCore\\Slu20210114\\Routine.Api\\Routine.Api.csproj",
-=======
-  "dgSpecHash": "/iMmqx18wsy18esgADaaMp6XKgcF+08m4lE4WrVxBh7gMkq+PXYpq7rU6qF2K7W/1dVJh60RwWcJ+EmLcbzw5Q==",
-  "success": true,
-  "projectFilePath": "D:\\Slu20200115\\Routine.Api\\Routine.Api.csproj",
->>>>>>> b5d21473de964c3d2cf683598c0aad8818437375
   "expectedPackageFiles": [
     "C:\\Users\\CSH\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\CSH\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
@@ -43,5 +37,12 @@
     "C:\\Users\\CSH\\.nuget\\packages\\system.text.encodings.web\\5.0.0\\system.text.encodings.web.5.0.0.nupkg.sha512",
     "C:\\Users\\CSH\\.nuget\\packages\\system.text.json\\5.0.0\\system.text.json.5.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "读取缓存文件 E:\\Asp.NetCore\\Slu20210114\\Routine.Api\\obj\\project.nuget.cache 时遇到问题: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

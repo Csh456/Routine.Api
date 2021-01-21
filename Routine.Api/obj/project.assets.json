@@ -1187,19 +1187,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "E:\\Asp.NetCore\\Slu20210114\\Routine.Api\\Routine.Api.csproj",
       "projectName": "Routine.Api",
       "projectPath": "E:\\Asp.NetCore\\Slu20210114\\Routine.Api\\Routine.Api.csproj",
       "packagesPath": "C:\\Users\\CSH\\.nuget\\packages\\",
       "outputPath": "E:\\Asp.NetCore\\Slu20210114\\Routine.Api\\obj\\",
-=======
-      "projectUniqueName": "D:\\Slu20200115\\Routine.Api\\Routine.Api.csproj",
-      "projectName": "Routine.Api",
-      "projectPath": "D:\\Slu20200115\\Routine.Api\\Routine.Api.csproj",
-      "packagesPath": "C:\\Users\\IT\\.nuget\\packages\\",
-      "outputPath": "D:\\Slu20200115\\Routine.Api\\obj\\",
->>>>>>> b5d21473de964c3d2cf683598c0aad8818437375
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -1267,5 +1259,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "读取缓存文件 E:\\Asp.NetCore\\Slu20210114\\Routine.Api\\obj\\project.nuget.cache 时遇到问题: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
