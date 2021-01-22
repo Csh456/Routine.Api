@@ -111,7 +111,6 @@ D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sql
 D:\Slu20200115\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.AssemblyInfoInputs.cache
 D:\Slu20200115\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.AssemblyInfo.cs
 D:\Slu20200115\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.RazorTargetAssemblyInfo.cache
-D:\Slu20200115\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.csproj.CopyComplete
 D:\Slu20200115\Routine.Api\obj\Debug\netcoreapp3.1\staticwebassets\Routine.Api.StaticWebAssets.Manifest.cache
 D:\Slu20200115\Routine.Api\obj\Debug\netcoreapp3.1\staticwebassets\Routine.Api.StaticWebAssets.xml
 D:\Slu20200115\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.dll
@@ -127,6 +126,7 @@ D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\Routine.Api.run
 D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\Routine.Api.dll
 D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\Routine.Api.pdb
 D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\SwaggerDemo.xml
+D:\Slu20200115\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.csprojAssemblyReference.cache
 D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\Humanizer.dll
 D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\Microsoft.Data.Sqlite.dll
 D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
@@ -145,10 +145,14 @@ D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\Microsoft.Exten
 D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
 D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\Microsoft.Extensions.Options.dll
 D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\Microsoft.OpenApi.dll
 D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\SQLitePCLRaw.batteries_v2.dll
 D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\SQLitePCLRaw.nativelibrary.dll
 D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\SQLitePCLRaw.core.dll
 D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\SQLitePCLRaw.provider.dynamic_cdecl.dll
+D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\System.Collections.Immutable.dll
 D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\System.ComponentModel.Annotations.dll
 D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
@@ -167,11 +171,4 @@ D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\runtimes\win-ar
 D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\runtimes\win-arm64\native\e_sqlite3.dll
 D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
 D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
-D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\Microsoft.OpenApi.dll
-D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
-D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
-D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
-D:\Slu20200115\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.csproj.CoreCompileInputs.cache
-D:\Slu20200115\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.MvcApplicationPartsAssemblyInfo.cs
-D:\Slu20200115\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.MvcApplicationPartsAssemblyInfo.cache
-D:\Slu20200115\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.csprojAssemblyReference.cache
+D:\Slu20200115\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.csproj.CopyComplete

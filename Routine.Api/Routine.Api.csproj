@@ -8,9 +8,11 @@
     <DocumentationFile>D:\Slu20200115\Routine.Api\SwaggerDemo.xml</DocumentationFile>
     <OutputPath>bin\Debug\netcoreapp3.1\</OutputPath>
     <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <NoWarn>1591</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.2">
       <PrivateAssets>all</PrivateAssets>

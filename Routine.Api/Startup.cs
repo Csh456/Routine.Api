@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.OpenApi.Models;
 using System.IO;
 using System;
+using AutoMapper;
 
 namespace Routine.Api
 {
@@ -57,6 +58,8 @@ namespace Routine.Api
             //services.AddMvc();
             //√ø¥Œhttp«Î«Û
             services.AddScoped<ICompanyRepository,CompanyRepository>();
+
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             services.AddSwaggerGen(option=> 
             {
