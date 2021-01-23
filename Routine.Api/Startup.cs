@@ -7,19 +7,36 @@ using Microsoft.Extensions.Hosting;
 using Routine.Api.Data;
 using Routine.Api.Services;
 using Microsoft.AspNetCore.Mvc.Formatters;
+using Microsoft.OpenApi.Models;
+using System.IO;
+using System;
+using AutoMapper;
 
 namespace Routine.Api
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class Startup
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="configuration"></param>
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="services"></param>
         public void ConfigureServices(IServiceCollection services)
         {
             //.net Code3.0之前的写法
@@ -41,13 +58,35 @@ namespace Routine.Api
             //services.AddMvc();
             //每次http请求
             services.AddScoped<ICompanyRepository,CompanyRepository>();
+
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+            services.AddSwaggerGen(option=> 
+            {
+                option.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Version = "v1",
+                    Title = "SparkTodo API",
+                    Description = "API for SparkTodo",
+                    Contact = new OpenApiContact() { Name = "Cai", Email = "1572926739@qq.com" }
+                });
+                var basePath = Path.GetDirectoryName(typeof(Program).Assembly.Location);//获取应用程序所在目录
+                var xmlPath = Path.Combine(basePath, "SwaggerDemo.xml");
+                option.IncludeXmlComments(xmlPath);
+                //option.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, $"{typeof(Startup).Assembly.GetName().FullName}"));
+            });
+
             services.AddDbContext<RoutineDbContext>(option =>
             {
                 
                 option.UseSqlite("Data Source=routine.db");
             });
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="app"></param>
+        /// <param name="env"></param>
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
@@ -61,7 +100,14 @@ namespace Routine.Api
             app.UseRouting();
 
             app.UseAuthorization();
-
+            app.UseStaticFiles();
+            app.UseSwagger();
+            app.UseSwaggerUI(c=> 
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Swagger Demo");
+                c.RoutePrefix = string.Empty;
+                c.DocumentTitle = "SparkTodo API";
+            });
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
