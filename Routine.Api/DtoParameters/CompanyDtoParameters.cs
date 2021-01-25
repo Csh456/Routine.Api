@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Routine.Api.Models
+namespace Routine.Api.DtoParameters
 {
-    public class CompanyDto
+    public class CompanyDtoParameters
     {
-        public Guid Id { get; set; }
         public string CompanyName { get; set; }
 
+        public string SearchTerm { get; set; }
 
     }
 }

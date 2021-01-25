@@ -126,7 +126,6 @@ D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\Routine.Api.run
 D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\Routine.Api.dll
 D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\Routine.Api.pdb
 D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\SwaggerDemo.xml
-D:\Slu20200115\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.csprojAssemblyReference.cache
 D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\Humanizer.dll
 D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\Microsoft.Data.Sqlite.dll
 D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
@@ -241,3 +240,8 @@ E:\Asp.NetCore\Slu20210114\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.cspro
 E:\Asp.NetCore\Slu20210114\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.dll
 E:\Asp.NetCore\Slu20210114\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.pdb
 E:\Asp.NetCore\Slu20210114\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.genruntimeconfig.cache
+D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\AutoMapper.dll
+D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Slu20200115\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.csproj.CoreCompileInputs.cache
+D:\Slu20200115\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.MvcApplicationPartsAssemblyInfo.cs
+D:\Slu20200115\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.MvcApplicationPartsAssemblyInfo.cache

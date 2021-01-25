@@ -11,6 +11,7 @@ using Microsoft.OpenApi.Models;
 using System.IO;
 using System;
 using AutoMapper;
+using Microsoft.AspNetCore.Http;
 
 namespace Routine.Api
 {
@@ -94,19 +95,31 @@ namespace Routine.Api
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            else
+            {
+                //非开发环境抛异常时运行
+                app.UseExceptionHandler(appBuilder => 
+                {
+                    appBuilder.Run(async context=> 
+                    {
+                        context.Response.StatusCode = 500;
+                        await context.Response.WriteAsync("Unexpected Error");
+                    });
+                });
+            }
             app.UseHttpsRedirection();
 
             app.UseRouting();
 
             app.UseAuthorization();
             app.UseStaticFiles();
+
             app.UseSwagger();
             app.UseSwaggerUI(c=> 
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Swagger Demo");
                 c.RoutePrefix = string.Empty;
-                c.DocumentTitle = "SparkTodo API";
+                c.DocumentTitle = "CaiShaoHua";
             });
             app.UseEndpoints(endpoints =>
             {

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Routine.Api.DtoParameters;
 using Routine.Api.Models;
 using Routine.Api.Services;
 
@@ -29,10 +30,16 @@ namespace Routine.Api.Controllers
             this.mapper = mapper ??
                           throw new ArgumentNullException(nameof(mapper));
         }
+        /// <summary>
+        /// head和get类似，但head并不返回资源体
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<CompanyDto>>> GetCompanies()
+        [HttpHead]
+        public async Task<ActionResult<IEnumerable<CompanyDto>>> 
+            GetCompanies(CompanyDtoParameters parameters)
         {
-            var companies = await companyRepository.GetCompaniesAsync();
+            var companies = await companyRepository.GetCompaniesAsync(parameters);
             //return new JsonResult(companies);
 
             var companyDtos = mapper.Map<IEnumerable<CompanyDto>>(companies);

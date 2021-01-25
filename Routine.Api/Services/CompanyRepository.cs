@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Routine.Api.Data;
+using Routine.Api.DtoParameters;
 using Routine.Api.Entities;
 using System;
 using System.Collections.Generic;
@@ -83,10 +84,33 @@ namespace Routine.Api.Services
             _context.Employees.Remove(employee);
         }
 
-        public async Task<IEnumerable<Company>> GetCompaniesAsync()
+        public async Task<IEnumerable<Company>> GetCompaniesAsync(CompanyDtoParameters parameters)
         {
             //throw new NotImplementedException();
-            return await _context.Companies.ToListAsync();
+            if(parameters == null) 
+            {
+                throw new ArgumentNullException(nameof(parameters));
+            }
+
+            if (string.IsNullOrWhiteSpace(parameters.CompanyName) &&
+                string.IsNullOrWhiteSpace(parameters.SearchTerm))
+            {
+                return await _context.Companies.ToListAsync();
+            }
+
+            var queryExpression = _context.Companies as IQueryable<Company>;
+            if (!string.IsNullOrWhiteSpace(parameters.CompanyName)) 
+            {
+                parameters.CompanyName = parameters.CompanyName.Trim();
+                queryExpression = queryExpression.Where(x => x.Name == parameters.CompanyName);
+            }
+
+            if (!string.IsNullOrWhiteSpace(parameters.SearchTerm))
+            {
+                parameters.SearchTerm = parameters.SearchTerm.Trim();
+                queryExpression = queryExpression.Where(x => x.Name.Contains(parameters.SearchTerm) || 
+                                                            x.Introduction.Contains(parameters.SearchTerm));
+            }
         }
 
         public async Task<IEnumerable<Company>> 
@@ -97,6 +121,7 @@ namespace Routine.Api.Services
             {
                 throw new ArgumentNullException(nameof(companyIds));
             }
+           
             return await _context.Companies
                 .Where(x => companyIds.Contains(x.Id))
                 .OrderBy(x => x.Name)
@@ -114,7 +139,7 @@ namespace Routine.Api.Services
                 .FirstOrDefaultAsync(x => x.Id == companyId);
         }
 
-        public async Task<IEnumerable<Employee>> GetEmployeesAsync(Guid companyId)
+        public async Task<IEnumerable<Employee>> GetEmployeesAsync(Guid companyId,string genderDisplay,string q)
         {
             //throw new NotImplementedException();
             if(companyId == Guid.Empty)
@@ -122,10 +147,36 @@ namespace Routine.Api.Services
                 throw new ArgumentNullException(nameof(companyId));
             }
 
-            return await _context.Employees
+            if (string.IsNullOrWhiteSpace(genderDisplay) && string.IsNullOrWhiteSpace(q))
+            {
+                return await _context.Employees
                 .Where(x => x.CompanyId == companyId)
                 .OrderBy(x => x.EmployeeNo)
                 .ToListAsync();
+            }
+
+            var items = _context.Employees.Where(x => x.CompanyId == companyId);
+
+            if (!string.IsNullOrWhiteSpace(genderDisplay))
+            {
+                var genderStr = genderDisplay.Trim();
+                var gender = Enum.Parse<Gender>(genderStr);
+
+                items = items.Where(x => x.Gender == gender);
+            }
+
+            if (!string.IsNullOrWhiteSpace(q))
+            {
+                q = q.Trim();
+                items = items.Where(x => x.EmployeeNo.Contains(q)
+                                        || x.FirstName.Contains(q)
+                                        || x.LastName.Contains(q));
+            }
+
+            return await items.OrderBy(x => x.EmployeeNo)
+                .ToListAsync();
+
+
         }
 
         public async Task<Employee> GetEmployeeAsync(Guid companyId, Guid employeeId)

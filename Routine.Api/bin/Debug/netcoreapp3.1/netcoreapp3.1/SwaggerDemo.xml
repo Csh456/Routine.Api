@@ -4,6 +4,12 @@
         <name>Routine.Api</name>
     </assembly>
     <members>
+        <member name="M:Routine.Api.Controllers.CompaniesController.GetCompanies">
+            <summary>
+            head和get类似，但head并不返回资源体
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:Routine.Api.Program">
             <summary>
             程序入口
