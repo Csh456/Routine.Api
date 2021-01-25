@@ -1,0 +1,12 @@
+E:\Asp.NetCore\Slu20210114\SqlSugar\bin\Debug\SqlSugar.exe.config
+E:\Asp.NetCore\Slu20210114\SqlSugar\bin\Debug\SqlSugar.exe
+E:\Asp.NetCore\Slu20210114\SqlSugar\bin\Debug\SqlSugar.pdb
+E:\Asp.NetCore\Slu20210114\SqlSugar\bin\Debug\SqlSugar.dll
+E:\Asp.NetCore\Slu20210114\SqlSugar\bin\Debug\Newtonsoft.Json.dll
+E:\Asp.NetCore\Slu20210114\SqlSugar\obj\Debug\SqlSugar.csprojAssemblyReference.cache
+E:\Asp.NetCore\Slu20210114\SqlSugar\obj\Debug\SqlSugar.Properties.Resources.resources
+E:\Asp.NetCore\Slu20210114\SqlSugar\obj\Debug\SqlSugar.csproj.GenerateResource.cache
+E:\Asp.NetCore\Slu20210114\SqlSugar\obj\Debug\SqlSugar.csproj.CoreCompileInputs.cache
+E:\Asp.NetCore\Slu20210114\SqlSugar\obj\Debug\SqlSugar.csproj.CopyComplete
+E:\Asp.NetCore\Slu20210114\SqlSugar\obj\Debug\SqlSugar.exe
+E:\Asp.NetCore\Slu20210114\SqlSugar\obj\Debug\SqlSugar.pdb
