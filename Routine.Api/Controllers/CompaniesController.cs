@@ -37,7 +37,7 @@ namespace Routine.Api.Controllers
         [HttpGet]
         [HttpHead]
         public async Task<ActionResult<IEnumerable<CompanyDto>>> 
-            GetCompanies(CompanyDtoParameters parameters)
+            GetCompanies([FromQuery]CompanyDtoParameters parameters)
         {
             var companies = await companyRepository.GetCompaniesAsync(parameters);
             //return new JsonResult(companies);

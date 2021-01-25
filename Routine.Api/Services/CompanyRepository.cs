@@ -111,6 +111,7 @@ namespace Routine.Api.Services
                 queryExpression = queryExpression.Where(x => x.Name.Contains(parameters.SearchTerm) || 
                                                             x.Introduction.Contains(parameters.SearchTerm));
             }
+            return await queryExpression.ToListAsync();
         }
 
         public async Task<IEnumerable<Company>> 
