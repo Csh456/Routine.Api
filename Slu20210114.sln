@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Routine.Api", "Routine.Api\Routine.Api.csproj", "{E53CD872-7A4E-4895-B673-0EE19DBDD815}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlSugar", "SqlSugar\SqlSugar.csproj", "{5C0B4216-0830-4810-BEEC-9915F3FB7BDD}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{E53CD872-7A4E-4895-B673-0EE19DBDD815}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E53CD872-7A4E-4895-B673-0EE19DBDD815}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E53CD872-7A4E-4895-B673-0EE19DBDD815}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5C0B4216-0830-4810-BEEC-9915F3FB7BDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5C0B4216-0830-4810-BEEC-9915F3FB7BDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5C0B4216-0830-4810-BEEC-9915F3FB7BDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5C0B4216-0830-4810-BEEC-9915F3FB7BDD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
