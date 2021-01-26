@@ -57,5 +57,12 @@ namespace Routine.Api.Controllers
             var employeeDto = mapper.Map<EmployeeDto>(employee);
             return Ok(employeeDto);
         }
+        
+        [HttpPost]
+        public async Task<ActionResult<EmployeeDto>> 
+            CreateEmployeeForCompany(Guid companyId,EmployeeAddDto employee)
+        {
+
+        }
     }
 }

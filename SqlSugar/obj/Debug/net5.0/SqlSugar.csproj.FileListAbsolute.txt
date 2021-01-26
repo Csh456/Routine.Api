@@ -1,0 +1,16 @@
+D:\Slu20200115\SqlSugar\bin\Debug\net5.0\SqlSugar.exe
+D:\Slu20200115\SqlSugar\bin\Debug\net5.0\SqlSugar.deps.json
+D:\Slu20200115\SqlSugar\bin\Debug\net5.0\SqlSugar.runtimeconfig.json
+D:\Slu20200115\SqlSugar\bin\Debug\net5.0\SqlSugar.runtimeconfig.dev.json
+D:\Slu20200115\SqlSugar\bin\Debug\net5.0\SqlSugar.dll
+D:\Slu20200115\SqlSugar\bin\Debug\net5.0\ref\SqlSugar.dll
+D:\Slu20200115\SqlSugar\bin\Debug\net5.0\SqlSugar.pdb
+D:\Slu20200115\SqlSugar\obj\Debug\net5.0\SqlSugar.csprojAssemblyReference.cache
+D:\Slu20200115\SqlSugar\obj\Debug\net5.0\SqlSugar.GeneratedMSBuildEditorConfig.editorconfig
+D:\Slu20200115\SqlSugar\obj\Debug\net5.0\SqlSugar.AssemblyInfoInputs.cache
+D:\Slu20200115\SqlSugar\obj\Debug\net5.0\SqlSugar.AssemblyInfo.cs
+D:\Slu20200115\SqlSugar\obj\Debug\net5.0\SqlSugar.csproj.CoreCompileInputs.cache
+D:\Slu20200115\SqlSugar\obj\Debug\net5.0\SqlSugar.dll
+D:\Slu20200115\SqlSugar\obj\Debug\net5.0\ref\SqlSugar.dll
+D:\Slu20200115\SqlSugar\obj\Debug\net5.0\SqlSugar.pdb
+D:\Slu20200115\SqlSugar\obj\Debug\net5.0\SqlSugar.genruntimeconfig.cache
