@@ -4,10 +4,17 @@
         <name>Routine.Api</name>
     </assembly>
     <members>
-        <member name="M:Routine.Api.Controllers.CompaniesController.GetCompanies">
+        <member name="M:Routine.Api.Controllers.CompaniesController.GetCompanies(Routine.Api.DtoParameters.CompanyDtoParameters)">
             <summary>
             head和get类似，但head并不返回资源体
             </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Routine.Api.Controllers.CompaniesController.CreateCompany(Routine.Api.Models.CompanyAddDto)">
+            <summary>
+            HttpPost返回的是201
+            </summary>
+            <param name="company"></param>
             <returns></returns>
         </member>
         <member name="T:Routine.Api.Program">

@@ -25,7 +25,8 @@ namespace Routine.Api.Controllers
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<EmployeeDto>>> 
-            GetEmployeesForCompany(Guid companyId,[FromQuery(Name ="gender")] string genderDisplay,string q)
+            GetEmployeesForCompany(Guid companyId,
+                [FromQuery(Name ="gender")] string genderDisplay,string q)
         {
             if (! await companyRepository.CompanyExistAsync(companyId))
             {

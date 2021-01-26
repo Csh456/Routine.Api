@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Routine.Api.DtoParameters;
+using Routine.Api.Entities;
 using Routine.Api.Models;
 using Routine.Api.Services;
 
@@ -50,7 +51,7 @@ namespace Routine.Api.Controllers
             return Ok(companyDtos);//返回202
             //return NotFound(companies);//返回404
         }
-        [HttpGet("{companyId}")]    //api/Companies/{companyId}
+        [HttpGet("{companyId}",Name =nameof(GetCompany))]    //api/Companies/{companyId}
         public async Task<ActionResult<CompanyDto>> GetCompany(Guid companyId)
         {
             //var exist = await companyRepository.CompanyExistAsync(companyId);
@@ -66,6 +67,31 @@ namespace Routine.Api.Controllers
 
 
             return Ok(mapper.Map<CompanyDto>(company));
+        }
+
+        /// <summary>
+        /// HttpPost返回的是201
+        /// </summary>
+        /// <param name="company"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public async Task<ActionResult<CompanyDto>> CreateCompany(CompanyAddDto company)
+        {
+            //使用ApiController这个特性，会自动返回400
+            //if(company == null)
+            //{
+            //    return BadRequest();    //返回400
+            //}
+
+            var entity = mapper.Map<Company>(company);
+            companyRepository.AddCompany(entity);
+            
+            //当这一步使用完成后才添加到数据库中
+            await companyRepository.SaveAsync();
+
+            var returnDto = mapper.Map<CompanyDto>(entity);
+            
+            return CreatedAtRoute(nameof(GetCompany),new { companyId = returnDto.Id},returnDto);
         }
     }
 }
