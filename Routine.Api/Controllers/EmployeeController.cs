@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Routine.Api.Services;
 using Routine.Api.Models;
+using Routine.Api.Entities;
 
 namespace Routine.Api.Controllers
 {
@@ -37,7 +38,7 @@ namespace Routine.Api.Controllers
             var employeeDtos = mapper.Map<IEnumerable<EmployeeDto>>(employees);
             return Ok(employeeDtos);
         }
-        [HttpGet("{employeeId}")]
+        [HttpGet("{employeeId}",Name = nameof(GetEmployeeForCompany))]
         public async Task<ActionResult<EmployeeDto>>
             GetEmployeeForCompany(Guid companyId,Guid employeeId)
         {
@@ -62,7 +63,23 @@ namespace Routine.Api.Controllers
         public async Task<ActionResult<EmployeeDto>> 
             CreateEmployeeForCompany(Guid companyId,EmployeeAddDto employee)
         {
+            if(! await companyRepository.CompanyExistAsync(companyId))
+            {
+                return NotFound();
+            }
 
+            var entity = mapper.Map<Employee>(employee);
+
+            companyRepository.AddEmployee(companyId, entity);
+            await companyRepository.SaveAsync();
+
+            var dtoToReturn = mapper.Map<EmployeeDto>(entity);
+
+            return CreatedAtRoute(nameof(GetEmployeeForCompany), new
+            {
+                companyId = companyId,
+                employeeId = dtoToReturn.Id
+            }, dtoToReturn);
         }
     }
 }
