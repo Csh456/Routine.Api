@@ -77,7 +77,7 @@ namespace Routine.Api.Controllers
 
             return CreatedAtRoute(nameof(GetEmployeeForCompany), new
             {
-                companyId = companyId,
+                companyId,
                 employeeId = dtoToReturn.Id
             }, dtoToReturn);
         }
