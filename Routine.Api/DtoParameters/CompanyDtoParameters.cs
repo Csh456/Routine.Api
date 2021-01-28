@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Routine.Api.DtoParameters
+﻿namespace Routine.Api.DtoParameters
 {
     public class CompanyDtoParameters
     {
