@@ -16,8 +16,8 @@ namespace Routine.Api.Controllers
     //[Route("api/[controller]")]   不建议，因为controller可能更改
     public class CompaniesController : ControllerBase
     {
-        private readonly ICompanyRepository companyRepository;
-        private readonly IMapper mapper;
+        private readonly ICompanyRepository _companyRepository;
+        private readonly IMapper _mapper;
 
         //public IActionResult Index()
         //{
@@ -25,10 +25,10 @@ namespace Routine.Api.Controllers
         //}
         public CompaniesController(ICompanyRepository companyRepository,IMapper mapper)
         {
-            this.companyRepository = companyRepository ??
+            this._companyRepository = companyRepository ??
                                      throw new ArgumentNullException(nameof(companyRepository));
             //构造函数注入对象映射器
-            this.mapper = mapper ??
+            this._mapper = mapper ??
                           throw new ArgumentNullException(nameof(mapper));
         }
         /// <summary>
@@ -40,10 +40,10 @@ namespace Routine.Api.Controllers
         public async Task<ActionResult<IEnumerable<CompanyDto>>> 
             GetCompanies([FromQuery]CompanyDtoParameters parameters)
         {
-            var companies = await companyRepository.GetCompaniesAsync(parameters);
+            var companies = await _companyRepository.GetCompaniesAsync(parameters);
             //return new JsonResult(companies);
 
-            var companyDtos = mapper.Map<IEnumerable<CompanyDto>>(companies);
+            var companyDtos = _mapper.Map<IEnumerable<CompanyDto>>(companies);
 
             
             //return companyDtos;
@@ -59,14 +59,14 @@ namespace Routine.Api.Controllers
             //{
             //    return NotFound();
             //}
-            var company = await companyRepository.GetCompanyAsync(companyId);
+            var company = await _companyRepository.GetCompanyAsync(companyId);
             if (company == null)
             {
                 return NotFound();
             }
 
 
-            return Ok(mapper.Map<CompanyDto>(company));
+            return Ok(_mapper.Map<CompanyDto>(company));
         }
 
         /// <summary>
@@ -83,13 +83,13 @@ namespace Routine.Api.Controllers
             //    return BadRequest();    //返回400
             //}
 
-            var entity = mapper.Map<Company>(company);
-            companyRepository.AddCompany(entity);
+            var entity = _mapper.Map<Company>(company);
+            _companyRepository.AddCompany(entity);
             
             //当这一步使用完成后才添加到数据库中
-            await companyRepository.SaveAsync();
+            await _companyRepository.SaveAsync();
 
-            var returnDto = mapper.Map<CompanyDto>(entity);
+            var returnDto = _mapper.Map<CompanyDto>(entity);
             
             return CreatedAtRoute(nameof(GetCompany),new { companyId = returnDto.Id},returnDto);
         }

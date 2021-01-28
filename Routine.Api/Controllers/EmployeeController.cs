@@ -14,13 +14,13 @@ namespace Routine.Api.Controllers
     [Route("api/companies/{companyId}/employees")]
     public class EmployeeController:ControllerBase
     {
-        private readonly IMapper mapper;
-        private readonly ICompanyRepository companyRepository;
+        private readonly IMapper _mapper;
+        private readonly ICompanyRepository _companyRepository;
 
         public EmployeeController(IMapper mapper,ICompanyRepository companyRepository)
         {
-            this.mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
-            this.companyRepository = companyRepository 
+            this._mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
+            this._companyRepository = companyRepository 
                                     ?? throw new ArgumentNullException(nameof(companyRepository));
         }
 
@@ -29,25 +29,25 @@ namespace Routine.Api.Controllers
             GetEmployeesForCompany(Guid companyId,
                 [FromQuery(Name ="gender")] string genderDisplay,string q)
         {
-            if (! await companyRepository.CompanyExistAsync(companyId))
+            if (! await _companyRepository.CompanyExistAsync(companyId))
             {
                 return NotFound();
             }
-            var employees = await companyRepository.GetEmployeesAsync(companyId,genderDisplay,q);
+            var employees = await _companyRepository.GetEmployeesAsync(companyId,genderDisplay,q);
 
-            var employeeDtos = mapper.Map<IEnumerable<EmployeeDto>>(employees);
+            var employeeDtos = _mapper.Map<IEnumerable<EmployeeDto>>(employees);
             return Ok(employeeDtos);
         }
         [HttpGet("{employeeId}",Name = nameof(GetEmployeeForCompany))]
         public async Task<ActionResult<EmployeeDto>>
             GetEmployeeForCompany(Guid companyId,Guid employeeId)
         {
-            if (!await companyRepository.CompanyExistAsync(companyId))
+            if (!await _companyRepository.CompanyExistAsync(companyId))
             {
                 return NotFound();
             }
 
-            var employee = await companyRepository.GetEmployeeAsync(companyId, employeeId);
+            var employee = await _companyRepository.GetEmployeeAsync(companyId, employeeId);
             if (employee == null)
             {
                 return NotFound();
@@ -55,7 +55,7 @@ namespace Routine.Api.Controllers
 
          
 
-            var employeeDto = mapper.Map<EmployeeDto>(employee);
+            var employeeDto = _mapper.Map<EmployeeDto>(employee);
             return Ok(employeeDto);
         }
         
@@ -63,17 +63,17 @@ namespace Routine.Api.Controllers
         public async Task<ActionResult<EmployeeDto>> 
             CreateEmployeeForCompany(Guid companyId,EmployeeAddDto employee)
         {
-            if(! await companyRepository.CompanyExistAsync(companyId))
+            if(! await _companyRepository.CompanyExistAsync(companyId))
             {
                 return NotFound();
             }
 
-            var entity = mapper.Map<Employee>(employee);
+            var entity = _mapper.Map<Employee>(employee);
 
-            companyRepository.AddEmployee(companyId, entity);
-            await companyRepository.SaveAsync();
+            _companyRepository.AddEmployee(companyId, entity);
+            await _companyRepository.SaveAsync();
 
-            var dtoToReturn = mapper.Map<EmployeeDto>(entity);
+            var dtoToReturn = _mapper.Map<EmployeeDto>(entity);
 
             return CreatedAtRoute(nameof(GetEmployeeForCompany), new
             {

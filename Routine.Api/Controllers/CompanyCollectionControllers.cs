@@ -15,15 +15,16 @@ namespace Routine.Api.Controllers
     [Route("api/companycollections")]
     public class CompanyCollectionControllers : ControllerBase
     {
-        private readonly IMapper mapper;
-        private readonly ICompanyRepository companyRepository;
+        private readonly IMapper _mapper;
 
-        public CompanyCollectionControllers(IMapper mapper, ICompanyRepository companyRepository)
+        private readonly ICompanyRepository _companyRepository;
+      
+        public CompanyCollectionControllers(IMapper mapper,ICompanyRepository companyRepository)
         {
-            this.mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
+            _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
+            _companyRepository = companyRepository 
+                                 ?? throw new ArgumentNullException(nameof(companyRepository));
 
-            this.companyRepository = companyRepository
-                                     ?? throw new ArgumentNullException(nameof(companyRepository));
         }
 
         //1,2,3,4
@@ -38,14 +39,14 @@ namespace Routine.Api.Controllers
                 return BadRequest();
             }
 
-            var entities = await companyRepository.GetCompaniesAsync(ids);
+            var entities = await _companyRepository.GetCompaniesAsync(ids);
 
             if (ids.Count() != entities.Count())
             {
                 return NotFound();
             }
 
-            var dtoTosReturn = mapper.Map<IEnumerable<CompanyDto>>(entities);
+            var dtoTosReturn = _mapper.Map<IEnumerable<CompanyDto>>(entities);
 
             return Ok(dtoTosReturn);
         }
@@ -54,16 +55,16 @@ namespace Routine.Api.Controllers
         public async Task<ActionResult<IEnumerable<CompanyDto>>> CreateCompanyCollection(
             IEnumerable<CompanyAddDto> companyCollection)
         {
-            var companyEntities = mapper.Map<IEnumerable<Company>>(companyCollection);
+            var companyEntities = _mapper.Map<IEnumerable<Company>>(companyCollection);
 
             foreach (var company in companyEntities)
             {
-                companyRepository.AddCompany(company);
+                _companyRepository.AddCompany(company);
             }
 
-            await companyRepository.SaveAsync();
+            await _companyRepository.SaveAsync();
             
-            var dtosToReturn = mapper.Map<IEnumerable<CompanyDto>>(companyEntities);
+            var dtosToReturn = _mapper.Map<IEnumerable<CompanyDto>>(companyEntities);
 
             var idsString = string.Join(",", dtosToReturn.Select(x => x.Id));
 
