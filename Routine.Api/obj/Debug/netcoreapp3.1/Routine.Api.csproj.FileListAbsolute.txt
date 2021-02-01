@@ -245,3 +245,4 @@ D:\Slu20200115\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.csproj.CopyComple
 D:\Slu20200115\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.dll
 D:\Slu20200115\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.pdb
 D:\Slu20200115\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.genruntimeconfig.cache
+D:\Slu20200115\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.csprojAssemblyReference.cache
