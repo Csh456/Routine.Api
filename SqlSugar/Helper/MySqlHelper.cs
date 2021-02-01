@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Configuration;
 using System.IO;
+using System.Reflection;
 
 namespace SqlSugar.Helper
 {
@@ -9,6 +10,7 @@ namespace SqlSugar.Helper
         private readonly SqlSugarClient _client;
         public MySqlHelper(string connectionStr)
         {
+            Console.WriteLine(Assembly.GetEntryAssembly().Location);
             _client = new SqlSugarClient(new ConnectionConfig
             {
                 ConnectionString = connectionStr,
@@ -23,7 +25,7 @@ namespace SqlSugar.Helper
 
         private void CheckEntitiesFolder()
         {
-            if (Directory.GetDirectories(Path.Combine(AppDomain.CurrentDomain.SetupInformation.ApplicationBase ?? string.Empty,
+            if (Directory.GetDirectories(Path.Combine(Assembly.GetEntryAssembly().Location,
                 "Entities")).Length == 0)
             {
                 _client.DbFirst.CreateClassFile(AppDomain.CurrentDomain.SetupInformation.ApplicationBase,"Entities");
