@@ -2,15 +2,16 @@
 using System.Configuration;
 using System.IO;
 using System.Reflection;
+using SqlSugar;
 
-namespace SqlSugar.Helper
+namespace SqlSugarTest.Helper
 {
     public class MySqlHelper
     {
         private readonly SqlSugarClient _client;
         public MySqlHelper(string connectionStr)
         {
-            Console.WriteLine(Assembly.GetEntryAssembly().Location);
+            //Console.WriteLine(Assembly.GetEntryAssembly().Location);
             _client = new SqlSugarClient(new ConnectionConfig
             {
                 ConnectionString = connectionStr,
@@ -26,9 +27,9 @@ namespace SqlSugar.Helper
         private void CheckEntitiesFolder()
         {
             if (Directory.GetDirectories(Path.Combine(Assembly.GetEntryAssembly().Location,
-                "Entities")).Length == 0)
+                "../../../../Entities")).Length == 0)
             {
-                _client.DbFirst.CreateClassFile(AppDomain.CurrentDomain.SetupInformation.ApplicationBase,"Entities");
+                _client.DbFirst.CreateClassFile(AppDomain.CurrentDomain.SetupInformation.ApplicationBase, "../../../Entities");
             }
         }
         

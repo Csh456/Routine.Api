@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.Extensions.Configuration;
-using SqlSugar.Helper;
-namespace SqlSugar
+using SqlSugarTest.Helper;
+namespace SqlSugarTest
 {
     class Program
     {

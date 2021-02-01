@@ -7815,9 +7815,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Slu20200115\\SqlSugar\\SqlSugar.csproj",
-      "projectName": "SqlSugar",
-      "projectPath": "D:\\Slu20200115\\SqlSugar\\SqlSugar.csproj",
+      "projectUniqueName": "D:\\Slu20200115\\SqlSugar\\SqlSugarTest.csproj",
+      "projectName": "SqlSugarTest",
+      "projectPath": "D:\\Slu20200115\\SqlSugar\\SqlSugarTest.csproj",
       "packagesPath": "C:\\Users\\IT\\.nuget\\packages\\",
       "outputPath": "D:\\Slu20200115\\SqlSugar\\obj\\",
       "projectStyle": "PackageReference",

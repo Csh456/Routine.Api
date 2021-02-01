@@ -5,14 +5,6 @@ D:\Slu20200115\SqlSugar\bin\Debug\net5.0\SqlSugar.runtimeconfig.dev.json
 D:\Slu20200115\SqlSugar\bin\Debug\net5.0\SqlSugar.dll
 D:\Slu20200115\SqlSugar\bin\Debug\net5.0\ref\SqlSugar.dll
 D:\Slu20200115\SqlSugar\bin\Debug\net5.0\SqlSugar.pdb
-D:\Slu20200115\SqlSugar\obj\Debug\net5.0\SqlSugar.GeneratedMSBuildEditorConfig.editorconfig
-D:\Slu20200115\SqlSugar\obj\Debug\net5.0\SqlSugar.AssemblyInfoInputs.cache
-D:\Slu20200115\SqlSugar\obj\Debug\net5.0\SqlSugar.AssemblyInfo.cs
-D:\Slu20200115\SqlSugar\obj\Debug\net5.0\SqlSugar.csproj.CoreCompileInputs.cache
-D:\Slu20200115\SqlSugar\obj\Debug\net5.0\SqlSugar.dll
-D:\Slu20200115\SqlSugar\obj\Debug\net5.0\ref\SqlSugar.dll
-D:\Slu20200115\SqlSugar\obj\Debug\net5.0\SqlSugar.pdb
-D:\Slu20200115\SqlSugar\obj\Debug\net5.0\SqlSugar.genruntimeconfig.cache
 D:\Slu20200115\SqlSugar\bin\Debug\net5.0\BouncyCastle.Crypto.dll
 D:\Slu20200115\SqlSugar\bin\Debug\net5.0\Google.Protobuf.dll
 D:\Slu20200115\SqlSugar\bin\Debug\net5.0\K4os.Compression.LZ4.dll
@@ -87,4 +79,12 @@ D:\Slu20200115\SqlSugar\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.0\System.D
 D:\Slu20200115\SqlSugar\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\Slu20200115\SqlSugar\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\Slu20200115\SqlSugar\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\Slu20200115\SqlSugar\obj\Debug\net5.0\SqlSugar.GeneratedMSBuildEditorConfig.editorconfig
+D:\Slu20200115\SqlSugar\obj\Debug\net5.0\SqlSugar.AssemblyInfoInputs.cache
+D:\Slu20200115\SqlSugar\obj\Debug\net5.0\SqlSugar.AssemblyInfo.cs
+D:\Slu20200115\SqlSugar\obj\Debug\net5.0\SqlSugar.csproj.CoreCompileInputs.cache
 D:\Slu20200115\SqlSugar\obj\Debug\net5.0\SqlSugar.csproj.CopyComplete
+D:\Slu20200115\SqlSugar\obj\Debug\net5.0\SqlSugar.dll
+D:\Slu20200115\SqlSugar\obj\Debug\net5.0\ref\SqlSugar.dll
+D:\Slu20200115\SqlSugar\obj\Debug\net5.0\SqlSugar.pdb
+D:\Slu20200115\SqlSugar\obj\Debug\net5.0\SqlSugar.genruntimeconfig.cache

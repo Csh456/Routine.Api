@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using Microsoft.Extensions.Configuration;
 
-namespace SqlSugar.Helper
+namespace SqlSugarTest.Helper
 {
     public class ConfigHelper
     {
