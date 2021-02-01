@@ -232,7 +232,6 @@ D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\runtimes\win-ar
 D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\runtimes\win-arm64\native\e_sqlite3.dll
 D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
 D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
-D:\Slu20200115\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.csprojAssemblyReference.cache
 D:\Slu20200115\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.AssemblyInfoInputs.cache
 D:\Slu20200115\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.AssemblyInfo.cs
 D:\Slu20200115\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.csproj.CoreCompileInputs.cache
