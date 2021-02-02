@@ -2,7 +2,9 @@
 using System.Configuration;
 using System.IO;
 using System.Reflection;
+using System.Threading.Tasks;
 using SqlSugar;
+using SqlSugarTest.Entities;
 
 namespace SqlSugarTest.Helper
 {
@@ -29,9 +31,16 @@ namespace SqlSugarTest.Helper
             if (Directory.GetDirectories(Path.Combine(Assembly.GetEntryAssembly().Location,
                 "../../../../Entities")).Length == 0)
             {
-                _client.DbFirst.CreateClassFile(AppDomain.CurrentDomain.SetupInformation.ApplicationBase, "../../../Entities");
+                _client.DbFirst.CreateClassFile(
+                    Path.Combine(AppDomain.CurrentDomain.SetupInformation.ApplicationBase, "../../../Entities"),
+                    "SqlSugarTest.Entities");
             }
         }
-        
+        //插入数据
+        public async Task<studentinfo> Insert(studentinfo stu)
+        {
+           var newStu = await _client.Insertable<studentinfo>(stu).ExecuteReturnEntityAsync();
+           return newStu;
+        }
     }
 }

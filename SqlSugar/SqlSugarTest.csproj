@@ -17,4 +17,10 @@
     <PackageReference Include="SqlSugarCore" Version="5.0.2.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
