@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Linq;
 using System.Text;
+using SqlSugar;
 
 namespace SqlSugarTest.Entities
 {
     ///<summary>
     ///
     ///</summary>
-    public partial class studentinfo
+    public class studentinfo
     {
            public studentinfo(){
 
@@ -17,14 +18,16 @@ namespace SqlSugarTest.Entities
            /// Desc:
            /// Default:
            /// Nullable:False
-           /// </summary>           
+           /// </summary>
+           [SugarColumn(IsPrimaryKey = true, IsIdentity = true)] 
            public int Id {get;set;}
 
            /// <summary>
            /// Desc:
            /// Default:
            /// Nullable:True
-           /// </summary>           
+           /// </summary>
+            
            public string Name {get;set;}
 
            /// <summary>

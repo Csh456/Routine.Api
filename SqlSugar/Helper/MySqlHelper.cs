@@ -28,11 +28,11 @@ namespace SqlSugarTest.Helper
 
         private void CheckEntitiesFolder()
         {
-            if (Directory.GetDirectories(Path.Combine(Assembly.GetEntryAssembly().Location,
+            if (Directory.GetDirectories(Path.Combine(Assembly.GetEntryAssembly()?.Location ?? string.Empty,
                 "../../../../Entities")).Length == 0)
             {
                 _client.DbFirst.CreateClassFile(
-                    Path.Combine(AppDomain.CurrentDomain.SetupInformation.ApplicationBase, "../../../Entities"),
+                    Path.Combine(AppDomain.CurrentDomain.SetupInformation.ApplicationBase ?? string.Empty, "../../../Entities"),
                     "SqlSugarTest.Entities");
             }
         }

@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Routine.Api", "Routine.Api\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqlSugarTest", "SqlSugar\SqlSugarTest.csproj", "{35C09748-02DF-4F39-A821-75CC51FF2526}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{068DA970-D711-4835-AB8A-54A8EEF03BA6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{35C09748-02DF-4F39-A821-75CC51FF2526}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35C09748-02DF-4F39-A821-75CC51FF2526}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35C09748-02DF-4F39-A821-75CC51FF2526}.Release|Any CPU.Build.0 = Release|Any CPU
+		{068DA970-D711-4835-AB8A-54A8EEF03BA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{068DA970-D711-4835-AB8A-54A8EEF03BA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{068DA970-D711-4835-AB8A-54A8EEF03BA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{068DA970-D711-4835-AB8A-54A8EEF03BA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

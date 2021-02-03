@@ -71,7 +71,7 @@ namespace Routine.Api
                     Contact = new OpenApiContact() { Name = "Cai", Email = "1572926739@qq.com" }
                 });
                 var basePath = Path.GetDirectoryName(typeof(Program).Assembly.Location);//获取应用程序所在目录
-                var xmlPath = Path.Combine(basePath, "SwaggerDemo.xml");
+                var xmlPath = Path.Combine(basePath ?? string.Empty, "SwaggerDemo.xml");
                 option.IncludeXmlComments(xmlPath);
                 //option.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, $"{typeof(Startup).Assembly.GetName().FullName}"));
             });
