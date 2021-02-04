@@ -28,6 +28,7 @@ namespace SqlSugarTest.Helper
 
         private void CheckEntitiesFolder()
         {
+            
             if (Directory.GetDirectories(Path.Combine(Assembly.GetEntryAssembly()?.Location ?? string.Empty,
                 "../../../../Entities")).Length == 0)
             {
