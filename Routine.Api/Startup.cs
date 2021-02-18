@@ -11,6 +11,7 @@ using System.IO;
 using System;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Routine.Api
 {
@@ -52,7 +53,31 @@ namespace Routine.Api
             //});
 
             //.net Code3.0的添加xml支持的写法
-            services.AddControllers().AddXmlDataContractSerializerFormatters();
+            services.AddControllers(setup =>
+            {
+                setup.ReturnHttpNotAcceptable = true;
+            }).AddXmlDataContractSerializerFormatters()
+                .ConfigureApiBehaviorOptions(setup =>
+                {
+                    setup.InvalidModelStateResponseFactory = context =>
+                    {
+                        var problemDetails = new ValidationProblemDetails(context.ModelState)
+                        {
+                            Type = "http://www.baidu.com",
+                            Title = "有错误！！！",
+                            Status = StatusCodes.Status422UnprocessableEntity,
+                            Detail = "请看详细信息",
+                            Instance = context.HttpContext.Request.Path
+                        };
+
+                        problemDetails.Extensions.Add("traceId",context.HttpContext.TraceIdentifier);
+
+                        return new UnprocessableEntityObjectResult(problemDetails)
+                        {
+                            ContentTypes = {"application/problem+json"}
+                        };
+                    };
+                });
 
             //.net core 3.0以下版本使用
             //services.AddMvc();
