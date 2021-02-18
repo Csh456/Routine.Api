@@ -12,7 +12,7 @@ namespace Routine.Api.ValidationAttributes
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
             //return base.IsValid(value, validationContext);
-            var addDto = (EmployeeAddDto) validationContext.ObjectInstance;
+            var addDto = (EmployeeAddOrUpdateDto) validationContext.ObjectInstance;
 
             if (addDto.EmployeeNo == addDto.FirstName)
             {

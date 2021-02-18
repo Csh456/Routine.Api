@@ -82,7 +82,7 @@ namespace Routine.Api.Controllers
         }
 
         [HttpPut("{employeeId}")]
-        public async Task<IActionResult> 
+        public async Task<ActionResult<EmployeeDto>> 
             UpdateEmployeeForCompany(Guid companyId, Guid employeeId,EmployeeUpdateDto employee)
         {
             if (!await _companyRepository.CompanyExistAsync(companyId))
@@ -94,7 +94,22 @@ namespace Routine.Api.Controllers
 
             if (employeeEntity == null)
             {
-                return NotFound();
+                //return NotFound();
+                var employeeToAddEntity = _mapper.Map<Employee>(employee);
+                employeeToAddEntity.Id = employeeId;
+
+                _companyRepository.AddEmployee(companyId,employeeToAddEntity);
+
+                await _companyRepository.SaveAsync();
+
+                var dtoToReturn = _mapper.Map<EmployeeDto>(employeeToAddEntity);
+
+                return CreatedAtRoute(nameof(GetEmployeeForCompany), new
+                {
+                    companyId,
+                    employeeId = dtoToReturn.Id,
+                },dtoToReturn);
+
             }
 
             // entity 转化为 updateDto
