@@ -175,9 +175,31 @@ namespace Routine.Api.Controllers
             {
                 return ValidationProblem(ModelState);
             }
+
             _mapper.Map(dtoToPatch, employeeEntity);
 
             _companyRepository.UpdateEmployee(employeeEntity);
+
+            await _companyRepository.SaveAsync();
+
+            return NoContent();
+        }
+
+        [HttpDelete("{employeeId}")]
+        public async Task<IActionResult> DeleteEmployeeForCompany(Guid companyId, Guid employeeId)
+        {
+            if (!await _companyRepository.CompanyExistAsync(companyId))
+            {
+                return NotFound();
+            }
+
+            var employeeEntity = await _companyRepository.GetEmployeeAsync(companyId, employeeId);
+            if (employeeEntity == null)
+            {
+                return NotFound();
+            }
+
+            _companyRepository.DeleteEmployee(employeeEntity);
 
             await _companyRepository.SaveAsync();
 
