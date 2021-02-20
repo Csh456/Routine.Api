@@ -16,7 +16,7 @@ namespace Test
 
             //(string a, string b) = alphabetStart;
             //Console.WriteLine(a);
-            s
+            
             _ = "sss";
             
             Console.ReadKey();

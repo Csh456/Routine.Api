@@ -246,3 +246,7 @@ D:\Slu20200115\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.csproj.CopyComple
 D:\Slu20200115\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.dll
 D:\Slu20200115\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.pdb
 D:\Slu20200115\Routine.Api\obj\Debug\netcoreapp3.1\Routine.Api.genruntimeconfig.cache
+D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\Slu20200115\Routine.Api\bin\Debug\netcoreapp3.1\netcoreapp3.1\Newtonsoft.Json.Bson.dll
