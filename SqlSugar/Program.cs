@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.Extensions.Configuration;
+using SqlSugarTest.Entities;
 using SqlSugarTest.Helper;
 namespace SqlSugarTest
 {
@@ -13,6 +14,12 @@ namespace SqlSugarTest
             var connectionStr = config.GetConnectionString("MySqlConnection");
 
             var sqlHelper=new MySqlHelper(connectionStr);
+            var s = sqlHelper.Insert(new studentinfo
+            {
+                Name = "网",
+                Age = 18
+            });
+            Console.WriteLine(s);
             Console.ReadKey();
         }
     }
