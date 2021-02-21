@@ -7808,25 +7808,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\IT\\.nuget\\packages\\": {},
+    "C:\\Users\\CSH\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Slu20200115\\SqlSugar\\SqlSugarTest.csproj",
+      "projectUniqueName": "E:\\Asp.NetCore\\Slu20210115\\SqlSugar\\SqlSugarTest.csproj",
       "projectName": "SqlSugarTest",
-      "projectPath": "D:\\Slu20200115\\SqlSugar\\SqlSugarTest.csproj",
-      "packagesPath": "C:\\Users\\IT\\.nuget\\packages\\",
-      "outputPath": "D:\\Slu20200115\\SqlSugar\\obj\\",
+      "projectPath": "E:\\Asp.NetCore\\Slu20210115\\SqlSugar\\SqlSugarTest.csproj",
+      "packagesPath": "C:\\Users\\CSH\\.nuget\\packages\\",
+      "outputPath": "E:\\Asp.NetCore\\Slu20210115\\SqlSugar\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\IT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\CSH\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.1.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
