@@ -114,6 +114,10 @@ namespace Routine.Api.Services
                 queryExpression = queryExpression.Where(x => x.Name.Contains(parameters.SearchTerm) || 
                                                             x.Introduction.Contains(parameters.SearchTerm));
             }
+
+            queryExpression = queryExpression.Skip(parameters.PageSize * (parameters.PageNum - 1))
+                .Take(parameters.PageSize);
+
             return await queryExpression.ToListAsync();
         }
 
